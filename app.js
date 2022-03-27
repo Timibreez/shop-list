@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
   res.render('top.ejs');
 });
 
+app.get('/create', (req, res) => {
+  res.render('create.ejs')
+})
+
 app.get('/index', (req, res) => {
   connection.query('SELECT * FROM shop_list.items', (error, results) => {
     console.log(results);
