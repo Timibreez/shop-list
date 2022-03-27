@@ -9,8 +9,9 @@ app.use(express.urlencoded({extended:false}));
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
+  password: 'secret',
   database: 'shop_list'
-})
+});
 
 // Change the URL of the route to the root URL
 app.get('/', (req, res) => {
